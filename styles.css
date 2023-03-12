@@ -87,7 +87,7 @@ button:focus {
 .slider-container .action-buttons button {          /* Här har det blivit konstigt, fortsätt felsöka här.https://www.youtube.com/watch?v=JkeyKeK3V24 ca 27 min */
     position: absolute;
     left: 35%;
-    top: 50%
+    top: 50%;
     z-index: 100;
 }
 
