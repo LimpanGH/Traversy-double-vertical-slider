@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');   /* Importing fonts from google api in case the users browser does not support your chosen fonts. */
 
-* {
-    box-sizing: border-box;
+* {                                             /* Using the universal selector to remove margin and padding from everything, a "reset". */
+    box-sizing: border-box;     
     margin: 0;
     padding: 0;
 }
@@ -11,57 +11,57 @@ body{
     /* display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;            We don´t actually need these here */
+    justify-content: center;                     We don´t actually need these here */
     height: 100vh;
     /* overflow: hidden;
-    margin: 0;                          Not these either */
+    margin: 0;                                   Not these either */
 }
 
-.slider-container {
-    position: relative;
-    overflow: hidden;
-    width: 100vw;
+.slider-container {                             /* Effects everything in our container (left-part and righ-part). */                            
+    position: relative;                         /* Sets the position for .slider-container to "relative"*/
+    overflow: hidden;                           /* Sets the overflowing text to hidden. */
+    width: 100vw;                               /* Sets the width and height of .slider-container to 100% of viewport */
     height: 100vh;
 }
 
 .left-slide {
     height: 100%;
-    width: 35%;
+    width: 35%;                                 /* Left slide width is set to 35% of the container. */
     position: absolute;
     top: 0;
     left: 0;
     transition: transform 0.5s ease-in-out;
 }
 
-.left-slide > div {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+.left-slide > div {                             /* Targets all the immediate divs (child-divs). */
+    height: 100%;                               /* Makes the currently selected div to take up the entire height of viewport*/
+    width: 100%;                                /* 100% of the container which we already set to 35%, (.left.slide.) */
+    display: flex;                              /* The element behaves like a block element and lays out its content according to the flexbox model. https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+    flex-direction: column;                     /* Puts the p underneath the h1. */
+    align-items: center;                        /* centers the p and h1 on the X-axis. */
+    justify-content: center;                    /* centers the p and h1 on the Y-axis. */
+    color: #fff;                              /* Ändrar texten i p och h1 till vit. */
 }
 
 .left-slide h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    margin-top: -30px;
+    font-size: 40px;                            /* Makes the text a little bigger than a default h1. */
+    margin-bottom: 10px;                        /* Makes the space between h1 an p a littel bigger (since we already did a universal margin and padding reset. )*/
+    margin-top: -30px;                          /* Stjäl lite av utrymet uptill så att både h1 och p flyttas uppåt 30px. */ 
 }
 
 .right-slide {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 35%;
-    width: 65%;
-    transition: transform 0.5s ease-in-out;
+    left: 35%;                                  /* Makes the right-slide start at 35% from the left (35% of the container) so that the right-slide starts where the left slide ends.  */
+    width: 65%;                                 /* Right slide width is set to 65% of the container. */                          
+    transition: transform 0.5s ease-in-out;     
 }
 
-.right-slide > div {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+.right-slide > div {                            /* This part enables the pictures to be seen in the browser. Remeber that we already set the property style to "style="background-image" in our html, https://www.w3schools.com/cssref/pr_background-image.php. */
+    background-repeat: no-repeat;               
+    background-size: cover;                     /* Shows the whole image and not a part of it. */
+    background-position: center center;         /* Centers the image on the X and Y axis. */ 
     height: 100%;
     width: 100%;
 }

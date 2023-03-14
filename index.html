@@ -16,7 +16,7 @@
     <div class="slider-container">                  <!-- En div som vi kallar slider-container som innehåller två av våra tre klasser. -->
 
       <div class="left-slide">                      <!-- Första klassen, textfält på vänster sida. -->
-        <div style="background-color: #fd3555">
+        <div style="background-color: #fd3555">   <!-- Pga hur slide funkar så kommer denna första div att höra ihop med sista background-image-diven i listan nedan.-->
           <h1>Nature flower</h1>
           <p>all in pink</p>
         </div>
@@ -28,7 +28,7 @@
           <h1>Lonely castle</h1>
           <p>in the wilderness</p>
         </div>
-        <div style="background-color: #FFB866">
+        <div style="background-color: #FFB866">     <!-- Vill vi lägga till en text och bakgrund här så måste vi lägga till korresponderande bild i början av listan under class="right-slide" -->
           <h1>Flying eagle</h1>
           <p>in the sunset</p>
         </div>
@@ -42,8 +42,8 @@
       </div>
 
       <div class="action-buttons">                  <!-- Vår HTMLs tredje klass, upp- och nedåt-knappar. -->
-        <button class="down-button">                <!-- "fonts Awesome fontsAwesome-arrow-up". https://fontawesome.com/v5/icons/arrows?s=solid&f=classic, https://www.w3schools.com/icons/fontawesome5_icons_arrows.asp  --> 
-          <i class="fas fa-arrow-down"></i>    
+        <button class="down-button">                <!-- "fonts Awesome Style fontsAwesome-arrow-up". https://fontawesome.com/v5/icons/arrows?s=solid&f=classic, https://www.w3schools.com/icons/fontawesome5_icons_arrows.asp  --> 
+          <i class="fas fa-arrow-down"></i>         <!-- Font Awesome is designed to be used with inline elements. The <i> and <span> elements are widely used for icons. https://www.w3schools.com/icons/fontawesome5_intro.asp -->
         </button>
         <button class="up-button">
           <i class="fas fa-arrow-up"></i>
