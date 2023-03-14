@@ -18,11 +18,18 @@ const changeSlide = (direction) => {
     const sliderHeight = sliderContainer.clientHeight       // console.log(sliderHeight)  Gives us the current height in pixels in the console.
     if(direction === 'up') {
         activeSlideIndex++
-        if(ac)
+        if(activeSlideIndex > slidesLength -1) {
+            activeSlideIndex = 0
+        }
+    } else if(direction === 'down') {
+        activeSlideIndex--
+        if(activeSlideIndex < 0) {
+            activeSlideIndex = slidesLength -1
+        }
     }
 
+slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`
+slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`
 }
 
-
-
-
+// https://www.youtube.com/watch?v=JkeyKeK3V24 36.32
