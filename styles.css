@@ -30,7 +30,7 @@ body{
     position: absolute ;
     top: 0;
     left: 0;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;     /* Makes the transitions smoother. */
 }
 
 .left-slide > div {                             /* Targets all the immediate divs (child-divs). */
@@ -102,12 +102,6 @@ button:focus {                                  /* Gör så att knapparna inte f
     border-top-right-radius: 5px;               /* Rundar kanten. */
     border-bottom-right-radius: 5px;            /* Rundar kanten. */
   }
-
-
-
-
-
-
 
 
 
