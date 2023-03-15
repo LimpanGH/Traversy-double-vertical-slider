@@ -27,15 +27,15 @@ body{
 .left-slide {
     height: 100%;
     width: 35%;                                 /* Left slide width is set to 35% of the container. */
-    position: absolute;
+    position: absolute ;
     top: 0;
     left: 0;
     transition: transform 0.5s ease-in-out;
 }
 
 .left-slide > div {                             /* Targets all the immediate divs (child-divs). */
-    height: 100%;                               /* Makes the currently selected div to take up the entire height of viewport*/
-    width: 100%;                                /* 100% of the container which we already set to 35%, (.left.slide.) */
+    height: 100%;                               /* Makes the currently selected div to take up the entire height of viewport. (100% of the containers 100%)*/
+    width: 100%;                                /* 100% width of the container of which we already set to 35%, (.left.slide.) */
     display: flex;                              /* The element behaves like a block element and lays out its content according to the flexbox model. https://developer.mozilla.org/en-US/docs/Web/CSS/display */
     flex-direction: column;                     /* Puts the p underneath the h1. */
     align-items: center;                        /* centers the p and h1 on the X-axis. */
@@ -44,8 +44,8 @@ body{
 }
 
 .left-slide h1 {
-    font-size: 40px;                            /* Makes the text a little bigger than a default h1. */
-    margin-bottom: 10px;                        /* Makes the space between h1 an p a littel bigger (since we already did a universal margin and padding reset. )*/
+    font-size: 40px;                            /* Makes the h1-text a little bigger than a default h1. */
+    margin-bottom: 10px;                        /* Makes the space between h1 and p a little bigger (since we already did a universal margin and padding reset. )*/
     margin-top: -30px;                          /* Stjäl lite av utrymet uptill så att både h1 och p flyttas uppåt 30px. */ 
 }
 
@@ -68,39 +68,39 @@ body{
 
 button {
     background-color: #fff;
-    border: none;
+    border: none;                               /* Tar bort ytterkanterna på knapparna. */
     color: #aaaa;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 15px;
+    cursor: pointer;                            /* Gör så att när vi hoovrar över knapparna så går min muspekaren från pil till att bli en hand. */
+    font-size: 16px;                            /* Gör pilarna större. */
+    padding: 15px;                              /* Gör knapparna större. */
 
 }
 
 button:hover {
-    color: #222;
+    color: #222;                              /* Gör så att när vi hoovrar över knapparna så blir pilarna svarta. */
 }
 
-button:focus {
-    outline: none;
+button:focus {                                  /* Gör så att knapparna inte får ytterkanter när vi hoovrar. Fattar inte varför det behövs, vi har ju redan satt dem till none i button. */
+    outline: none;                             
 }
 
-.slider-container .action-buttons button {          /* Här har det blivit konstigt, fortsätt felsöka här.https://www.youtube.com/watch?v=JkeyKeK3V24 ca 27 min */
+.slider-container .action-buttons button {
     position: absolute;
-    left: 35%;
-    top: 50%;
-    z-index: 100;
+    left: 35%;                                  /* Flyttar pil-knapparna till höger med 35% av sin container. */
+    top: 50%;                                   /* Flyttar pil-knapparna nedåt med 50% av sin container (till mitten) . */
+    z-index: 100;                               /* Ser till att knapparna alltid ligger översta lagret och därför alltid syns. */
 }
 
 .slider-container .action-buttons .down-button {
-    transform: translateX(-100%);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    transform: translateX(-100%);               /* Flyttar ned-knappen åt vänster med 100% av sin egen bredd, (elementets bredd). */
+    border-top-left-radius: 5px;                /* Rundar kanten. */
+    border-bottom-left-radius: 5px;             /* Rundar kanten. */
   }
   
   .slider-container .action-buttons .up-button {
-    transform: translateY(-100%);
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    transform: translateY(-100%);               /* Flyttar upp-knappen uppåt med 100% av sin egen höjd, (elementets bredd). */
+    border-top-right-radius: 5px;               /* Rundar kanten. */
+    border-bottom-right-radius: 5px;            /* Rundar kanten. */
   }
 
 
