@@ -14,7 +14,7 @@ let activeSlideIndex =0                                         // The pictures 
 slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`          
 
 upButton.addEventListener('click', () => changeSlide('up'))     // When we click the up-button, we run a function that we can name "changeSlide" and we pass in an argument of 'up'.  
-downButton.addEventListener('click', () => changeSlide('down')) // When we click the down-button, we run a function that we can name "changeSlide" and we pass in an argument of 'down'.  
+downButton.addEventListener('click', () => changeSlide('down')) // When we click the down-buttofn, we run a function that we can name "changeSlide" and we pass in an argument of 'down'.  
 
 const changeSlide = (direction) => {                            // Creating our function that we name "changeSlide", it takes in direction as a parameter. 
     const sliderHeight = sliderContainer.clientHeight           // Creating "sliderHeight" and set it to be sliderContainer and add the property clientHeight. As I understand it, this adapts the picture height to the current vieport in our browser??? console.log(sliderHeight)  Gives us the current height in pixels in the console.

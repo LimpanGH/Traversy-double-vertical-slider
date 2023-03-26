@@ -27,18 +27,18 @@ body{
 .left-slide {
     height: 100%;
     width: 35%;                                 /* Left slide width is set to 35% of the container. */
-    position: absolute ;
-    top: 0;
+    position: absolute;                         /* är ett child till position: relative på line 21 */
+    top: 0;                                     /* left-slide och slider container ska leava */
     left: 0;
     transition: transform 0.5s ease-in-out;     /* Makes the transitions smoother. */
 }
 
 .left-slide > div {                             /* Targets all the immediate divs (child-divs). */
-    height: 100%;                               /* Makes the currently selected div to take up the entire height of viewport. (100% of the containers 100%)*/
-    width: 100%;                                /* 100% width of the container of which we already set to 35%, (.left.slide.) */
+    height: 100%;                               /* Makes the currently selected div to take up the entire height of viewport. (100% of parent-element height)*/
+    width: 100%;                                /* 100% of parent-element width of which we already set to 35%, (.left.slide.) */
     display: flex;                              /* The element behaves like a block element and lays out its content according to the flexbox model. https://developer.mozilla.org/en-US/docs/Web/CSS/display */
     flex-direction: column;                     /* Puts the p underneath the h1. */
-    align-items: center;                        /* centers the p and h1 on the X-axis. */
+    align-items: center;                        /* centers the p and h1 on the X-axis. Med "flex-direction: column;" så ändras hur align-center och justify-content fungerar (axisen roterar 90 grader) */
     justify-content: center;                    /* centers the p and h1 on the Y-axis. */
     color: #fff;                              /* Ändrar texten i p och h1 till vit. */
 }

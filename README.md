@@ -13,7 +13,8 @@ Questions: ____________________________________________________________
 
 CSS - - - - - - -
 
-* .css line 22.  Why do we set "overflow: hidden;", theres not really an abundance of text.
+* .css line 22.  Why do we set "overflow: hidden;", theres not really an abundance of text. 
+  Svar: annars kan det knasa om vieport är mindre, tex på en telefon.
 
 * .css, vi definierar  font-size för h1 (line 46), men inte för p, varför? P har förmodligen en standardstorlek som vi inte      ändrar i detta projekt. 
 
@@ -46,3 +47,4 @@ Java Script - - - - - - - -
 
 
 
+Fortsätt genomgång med fred i css line 36.
