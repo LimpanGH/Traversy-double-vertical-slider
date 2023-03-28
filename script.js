@@ -14,10 +14,9 @@ let activeSlideIndex = 0                                        // The pictures 
 slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`          // Calculating starting points of the slides based on slideLength (4) and set it as slideLeft's css top property. We could also set this in the css-file.
 
 upButton.addEventListener('click', () => changeSlide('up'))     // When we click the up-button, we run a function that we can name "changeSlide" and we pass in an argument of 'up'.  
-downButton.addEventListener('click', () => changeSlide('down')) // When we click the down-buttofn, we run a function that we can name "changeSlide" and we pass in an argument of 'down'.  
+downButton.addEventListener('click', () => changeSlide('down')) // When we click the down-button, we run a function that we can name "changeSlide" and we pass in an argument of 'down'.  
 
 const changeSlide = (direction) => {                            // Creating our function that we name "changeSlide", it takes in direction as a parameter. 
-    const sliderHeight = sliderContainer.clientHeight           // Creating "sliderHeight" and set it to be sliderContainer and add the property clientHeight. As I understand it, this adapts the picture height to the current vieport in our browser??? console.log(sliderHeight)  Gives us the current height in pixels in the console.
     if(direction === 'up') {                                    // Checking for the direction that is passed in. If direction equals to 'up'...
         activeSlideIndex++                                      // then take "activeSlideIndex" and increment it by 1.
         if(activeSlideIndex > slidesLength -1) {                // and when we hit the end i.e if "activeSlideIndex" is greater than the last index in the slide. First picture has the index of 0, and if the active index is greater than -1...
@@ -29,11 +28,24 @@ const changeSlide = (direction) => {                            // Creating our 
             activeSlideIndex = slidesLength -1
         }
     } 
-
-/* This code allows the photos to actually slide up or down.
-   As I understand it, the .style property returns the inline style of the HTML element in question, i.e "background-image". 
-   The .transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model, https://developer.mozilla.org/en-US/docs/Web/CSS/transform.   
+    
+    /* This code allows the photos to actually slide up or down.
+    As I understand it, the .style property returns the inline style of the HTML element in question, i.e "background-image". 
+    The .transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model, https://developer.mozilla.org/en-US/docs/Web/CSS/transform.   
     */
+const sliderHeight = sliderContainer.clientHeight                                   // Creating "sliderHeight" and set it to be sliderContainer and add the property clientHeight. As I understand it, this adapts the picture height to the current vieport in our browser??? console.log(sliderHeight)  Gives us the current height in pixels in the console.
 slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`  // Using a Template String to translate the picture in our "slideRight" upwards, hence the minus-sign before the $. We calculate how much it should slide by multiplying "activeSlideIndex" by "sliderHeight" and output it in amount of pixels.
 slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`    // Using a Template String to translate the picture in our "slideRight" downwards.
 }
+
+
+
+/* This does the same..
+function myFunctionBody(message) {
+    console.log(message)
+}
+ As this..
+const myFunction = (message) => {
+    console.log(message)
+}
+*/

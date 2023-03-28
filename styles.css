@@ -28,7 +28,7 @@ body{
     height: 100%;
     width: 35%;                                 /* Left slide width is set to 35% of the container. */
     position: absolute;                         /* är ett child till position: relative på line 21 */
-    top: -250vh;                                     /* left-slide och slider container ska leava */
+    top: 0;                                     /* left-slide och slider container ska leava */
     left: 0;
     transition: transform 0.5s ease-in-out;     /* Makes the transitions smoother. */
 }
