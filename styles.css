@@ -28,7 +28,7 @@ body{
     height: 100%;
     width: 35%;                                 /* Left slide width is set to 35% of the container. */
     position: absolute;                         /* är ett child till position: relative på line 21 */
-    top: 0;                                     /* left-slide och slider container ska leava */
+    top: -250vh;                                     /* left-slide och slider container ska leava */
     left: 0;
     transition: transform 0.5s ease-in-out;     /* Makes the transitions smoother. */
 }
@@ -59,11 +59,11 @@ body{
 }
 
 .right-slide > div {                            /* This part enables the pictures to be seen in the browser. Remeber that we already set the property style to "style="background-image" in our html, https://www.w3schools.com/cssref/pr_background-image.php. */
-    background-repeat: no-repeat;               
+    background-repeat: no-repeat;               /* Makes one big background image, not a bunch of tiny ones */
     background-size: cover;                     /* Shows the whole image and not a part of it. */
-    background-position: center center;         /* Centers the image on the X and Y axis. */ 
-    height: 100%;
-    width: 100%;
+    background-position: center center;         /* Centers the image on the X and Y axis. Not sure we acutally need this in this case */ 
+    height: 100%;                               /* 100% of .right-slides height*/
+    width: 100%;                                /* 100% of .right-slides width */
 }
 
 button {
@@ -80,7 +80,7 @@ button:hover {
     color: #222;                              /* Gör så att när vi hoovrar över knapparna så blir pilarna svarta. */
 }
 
-button:focus {                                  /* Gör så att knapparna inte får ytterkanter när vi hoovrar. Fattar inte varför det behövs, vi har ju redan satt dem till none i button. */
+button:focus {                                  /* Gör så att knapparna inte får ytterkanter när vi hoovrar.  Vi har ju redan satt dem till none i button, men troligtvis vill vi här sätta det till none här med så att inte knapparna får borders när de är aktiva. */
     outline: none;                             
 }
 
@@ -88,7 +88,7 @@ button:focus {                                  /* Gör så att knapparna inte f
     position: absolute;
     left: 35%;                                  /* Flyttar pil-knapparna till höger med 35% av sin container. */
     top: 50%;                                   /* Flyttar pil-knapparna nedåt med 50% av sin container (till mitten) . */
-    z-index: 100;                               /* Ser till att knapparna alltid ligger översta lagret och därför alltid syns. */
+    z-index: 100;                               /* Ser till att knapparna alltid ligger översta lagret och därför alltid syns. Vilket lagerskikt ska elementet ha. */
 }
 
 .slider-container .action-buttons .down-button {
@@ -98,7 +98,7 @@ button:focus {                                  /* Gör så att knapparna inte f
   }
   
   .slider-container .action-buttons .up-button {
-    transform: translateY(-100%);               /* Flyttar upp-knappen uppåt med 100% av sin egen höjd, (elementets bredd). */
+    transform: translateY(-100%);               /* Flyttar upp-knappen uppåt med 100% av sin egen höjd, (elementets höjd). */
     border-top-right-radius: 5px;               /* Rundar kanten. */
     border-bottom-right-radius: 5px;            /* Rundar kanten. */
   }

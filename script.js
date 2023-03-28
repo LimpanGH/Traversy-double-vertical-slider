@@ -1,5 +1,5 @@
 
-// These calls all the classes in our html-document that we need.
+// These brings in all the classes in our html-document that we need.
 const sliderContainer = document.querySelector('.slider-container')
 const slideRight = document.querySelector('.right-slide ')
 const slideLeft = document.querySelector('.left-slide')
@@ -9,9 +9,9 @@ const slidesLength = slideRight.querySelectorAll('div').length  // Checks how ma
 
 // console.log(slidesLength); Gives us 4 in the console.
 
-let activeSlideIndex =0                                         // The pictures are positioned on top of eachother so we need to know which index is in view.                       
+let activeSlideIndex = 0                                        // The pictures are positioned on top of eachother so we need to know which index is in view. A declaration.                     
 
-slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`          
+slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`          // Calculating starting points of the slides based on slideLength (4) and set it as slideLeft's css top property. We could also set this in the css-file.
 
 upButton.addEventListener('click', () => changeSlide('up'))     // When we click the up-button, we run a function that we can name "changeSlide" and we pass in an argument of 'up'.  
 downButton.addEventListener('click', () => changeSlide('down')) // When we click the down-buttofn, we run a function that we can name "changeSlide" and we pass in an argument of 'down'.  
